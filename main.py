@@ -222,8 +222,8 @@ if __name__ == "__main__":
     # 接收的用户
     users = config["user"]
     # 传入地区获取天气信息
-    region = config["region"]
-    weather, temp, wind_dir = get_weather(region)
+    province, city = config["province"], config["city"]
+    weather, max_temperature, min_temperature = get_weather(province, city)
     note_ch = config["note_ch"]
     note_en = config["note_en"]
     if note_ch == "" and note_en == "":
